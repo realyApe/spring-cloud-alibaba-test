@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: service-shop-product-1
+  cloud:
+    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#        namespace: 4027ba58-0029-4d74-a65a-7aeb7762045d #指定dev pro环境
+      config:
+        server-addr: localhost:8848 # nacos的服务端地址
+#        namespace: 4027ba58-0029-4d74-a65a-7aeb7762045d #指定dev pro环境
+        group: PRODUCT_GROUP
+        file-extension: yaml    8081
+#        shared-dataids:all-service.yaml#配置要引入的配置
+#        refreshable-dataids:all-service.yaml#配置要实现动态配置刷新的配置
+  profiles:
+    active: dev #kaifa
+#    alibaba:
+#      seata:
+#        tx-service-group: product-service
